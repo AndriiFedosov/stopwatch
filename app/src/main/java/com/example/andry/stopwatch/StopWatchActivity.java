@@ -41,14 +41,14 @@ public class StopWatchActivity extends AppCompatActivity {
         savedInstanceState.putBoolean("wasRunning",wasRunning);
     }
 
-    //прри отсановке изменяем переменные
+    //при отсановке изменяем переменные
     @Override
     protected void onStop(){
         super.onStop();
         wasRunning=running;
         running=false;
     }
-    //при старте активности после вывода на передний план
+    //при старте активности после и  вывода на передний план
     @Override
     protected void onStart() {
         super.onStart();
@@ -57,15 +57,15 @@ public class StopWatchActivity extends AppCompatActivity {
         }
     }
 
-    //присваиваем кнопеке старт метот и выполняем его
+    //присваиваем кнопке старт метод и выполняем его
     public void OnClickStart(View view) {
         running=true;
     }
-    //присваиваем кнопеке стоп/пауза метот и выполняем его
+    //присваиваем кнопке стоп/пауза метод и выполняем его
     public void OnClickStop(View view) {
         running=false;
     }
-    //присваиваем кнопеке сброс метот и выполняем его
+    //присваиваем кнопке сброс метод и выполняем его
     public void OnClickReset(View view) {
         running=false;
         second=0;
